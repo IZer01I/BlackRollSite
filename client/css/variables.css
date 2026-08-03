@@ -1,0 +1,214 @@
+:root {
+  /* ========================================
+   * ЦВЕТОВАЯ ПАЛИТРА
+   * Современный гастрономический дарк
+   * ======================================== */
+  
+  /* Основные цвета - тема нори/лосося/васаби */
+  --color-nori-dark: #0D120E;        /* Основной фон - цвет нори (тёмный) */
+  --color-nori-medium: #151A17;      /* Средний нори */
+  --color-nori-light: #1A231F;       /* Светлый нори для карточек */
+  --color-nori-accent: #24302A;      /* Акцентный нори */
+  
+  /* Акцентные цвета */
+  --color-salmon: #FF6A3D;           /* Лосось - основной акцент */
+  --color-salmon-hover: #E55A2E;     /* Лосось при наведении */
+  --color-salmon-light: #FF8C6B;     /* Светлый лосось */
+  --color-salmon-dark: #CC5530;      /* Тёмный лосось */
+  
+  --color-wasabi: #B9D45A;           /* Васаби - вторичный акцент */
+  --color-wasabi-hover: #A4C045;     /* Васаби при наведении */
+  --color-wasabi-light: #CAE07A;     /* Светлый васаби */
+  --color-wasabi-dark: #94AB42;      /* Тёмный васаби */
+  
+  /* Нейтральные цвета */
+  --color-white: #FFFFFF;
+  --color-off-white: #F5F5F5;
+  --color-gray-50: #FAFAFA;
+  --color-gray-100: #F0F0F0;
+  --color-gray-200: #E0E0E0;
+  --color-gray-300: #CCCCCC;
+  --color-gray-400: #999999;
+  --color-gray-500: #666666;
+  --color-gray-600: #4D4D4D;
+  --color-gray-700: #333333;
+  --color-gray-800: #1F1F1F;
+  --color-gray-900: #0D0D0D;
+  
+  /* Семантические цвета */
+  --color-success: #B9D45A;          /* Васаби - успех */
+  --color-success-hover: #A4C045;
+  --color-warning: #FFA726;          /* Предупреждение */
+  --color-warning-hover: #FB8C00;
+  --color-error: #FF5252;            /* Ошибка */
+  --color-error-hover: #E53935;
+  --color-info: #42A5F5;             /* Информация */
+  --color-info-hover: #1E88E5;
+  
+  /* Градиенты */
+  --gradient-primary: linear-gradient(135deg, var(--color-salmon) 0%, var(--color-wasabi) 100%);
+  --gradient-salmon: linear-gradient(135deg, var(--color-salmon) 0%, var(--color-salmon-dark) 100%);
+  --gradient-wasabi: linear-gradient(135deg, var(--color-wasabi) 0%, var(--color-wasabi-dark) 100%);
+  --gradient-dark: linear-gradient(180deg, var(--color-nori-dark) 0%, var(--color-nori-light) 100%);
+  --gradient-card: linear-gradient(145deg, var(--color-nori-light) 0%, var(--color-nori-medium) 100%);
+  
+  /* Тени */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 12px 24px rgba(0, 0, 0, 0.6);
+  --shadow-salmon: 0 4px 12px rgba(255, 106, 61, 0.3);
+  --shadow-wasabi: 0 4px 12px rgba(185, 212, 90, 0.3);
+  
+  /* ========================================
+   * ТИПОГРАФИКА
+   * ======================================== */
+  
+  /* Шрифты */
+  --font-primary: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-mono: 'Courier New', Courier, monospace;
+  
+  /* Размеры шрифтов (mobile-first) */
+  --text-xs: clamp(0.7rem, 0.65rem + 0.25vw, 0.75rem);    /* 11-12px */
+  --text-sm: clamp(0.8rem, 0.75rem + 0.25vw, 0.875rem);   /* 13-14px */
+  --text-base: clamp(0.9rem, 0.85rem + 0.25vw, 1rem);     /* 14-16px */
+  --text-lg: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);     /* 16-18px */
+  --text-xl: clamp(1.125rem, 1rem + 0.5vw, 1.25rem);      /* 18-20px */
+  --text-2xl: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);    /* 20-24px */
+  --text-3xl: clamp(1.5rem, 1.25rem + 1.25vw, 1.875rem);  /* 24-30px */
+  --text-4xl: clamp(1.875rem, 1.5rem + 1.875vw, 2.25rem); /* 30-36px */
+  --text-5xl: clamp(2.25rem, 1.75rem + 2.5vw, 3rem);      /* 36-48px */
+  --text-6xl: clamp(2.75rem, 2rem + 3.75vw, 3.75rem);     /* 44-60px */
+  
+  /* Межстрочные интервалы */
+  --leading-none: 1;
+  --leading-tight: 1.25;
+  --leading-snug: 1.375;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+  --leading-loose: 2;
+  
+  /* Межбуквенные интервалы */
+  --tracking-tighter: -0.05em;
+  --tracking-tight: -0.025em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.025em;
+  --tracking-wider: 0.05em;
+  --tracking-widest: 0.1em;
+  
+  /* Вес шрифта */
+  --font-thin: 100;
+  --font-extralight: 200;
+  --font-light: 300;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+  --font-black: 900;
+  
+  /* ========================================
+   * ОТСТУПЫ И СЕТКА
+   * ======================================== */
+  
+  /* Базовая единица отступа */
+  --spacing-unit: 8px;
+  
+  /* Отступы */
+  --space-0: 0;
+  --space-1: calc(var(--spacing-unit) * 1);   /* 8px */
+  --space-2: calc(var(--spacing-unit) * 2);   /* 16px */
+  --space-3: calc(var(--spacing-unit) * 3);   /* 24px */
+  --space-4: calc(var(--spacing-unit) * 4);   /* 32px */
+  --space-5: calc(var(--spacing-unit) * 5);   /* 40px */
+  --space-6: calc(var(--spacing-unit) * 6);   /* 48px */
+  --space-8: calc(var(--spacing-unit) * 8);   /* 64px */
+  --space-10: calc(var(--spacing-unit) * 10); /* 80px */
+  --space-12: calc(var(--spacing-unit) * 12); /* 96px */
+  --space-16: calc(var(--spacing-unit) * 16); /* 128px */
+  --space-20: calc(var(--spacing-unit) * 20); /* 160px */
+  --space-24: calc(var(--spacing-unit) * 24); /* 192px */
+  
+  /* Контейнер */
+  --container-max: 1440px;
+  --container-padding-mobile: var(--space-4);
+  --container-padding-tablet: var(--space-6);
+  --container-padding-desktop: var(--space-8);
+  
+  /* Сетка */
+  --grid-columns: 12;
+  --grid-gap-mobile: var(--space-4);
+  --grid-gap-tablet: var(--space-6);
+  --grid-gap-desktop: var(--space-8);
+  
+  /* ========================================
+   * BORDER RADIUS
+   * ======================================== */
+  
+  --radius-none: 0;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-3xl: 32px;
+  --radius-full: 9999px;
+  
+  /* ========================================
+   * АНИМАЦИИ И ПЕРЕХОДЫ
+   * ======================================== */
+  
+  /* Длительность переходов */
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --duration-slow: 350ms;
+  --duration-slower: 500ms;
+  
+  /* Функции времени */
+  --ease-linear: linear;
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  
+  /* Стандартные переходы */
+  --transition-fast: var(--duration-fast) var(--ease-out);
+  --transition-normal: var(--duration-normal) var(--ease-in-out);
+  --transition-slow: var(--duration-slow) var(--ease-in-out);
+  
+  /* ========================================
+   * Z-INDEX СЛОИ
+   * ======================================== */
+  
+  --z-base: 0;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal-backdrop: 400;
+  --z-modal: 500;
+  --z-popover: 600;
+  --z-tooltip: 700;
+  --z-toast: 800;
+  
+  /* ========================================
+   * BREAKPOINTS (для JS/CSS custom properties)
+   * ======================================== */
+  
+  --breakpoint-xs: 360px;   /* Малые телефоны */
+  --breakpoint-sm: 576px;   /* Телефоны */
+  --breakpoint-md: 768px;   /* Планшеты */
+  --breakpoint-lg: 1024px;  /* Ноутбуки */
+  --breakpoint-xl: 1440px;  /* Десктопы */
+  --breakpoint-xxl: 1920px; /* Большие экраны */
+}
+
+/* ========================================
+ * MEDIA QUERIES HELPERS
+ * ======================================== */
+
+/* 
+Использование в CSS:
+@media (min-width: 768px) { ... }
+@media (min-width: 1024px) { ... }
+*/
