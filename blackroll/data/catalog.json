@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Филадельфия Лайт",
+    "description": "Нежный лосось, сливочный сыр, огурец, рис, нори.",
+    "price": 490,
+    "image": "philadelphia_light.jpg",
+    "category": "classic",
+    "weight": 230,
+    "spicy": false
+  },
+  {
+    "id": 2,
+    "name": "Калифорния с крабом",
+    "description": "Снежный краб, икра масаго, авокадо, огурец, рис, нори.",
+    "price": 520,
+    "image": "california_crab.jpg",
+    "category": "classic",
+    "weight": 240,
+    "spicy": false
+  },
+  {
+    "id": 3,
+    "name": "Дракон Ролл",
+    "description": "Угорь, сливочный сыр, унаги соус, кунжут, авокадо.",
+    "price": 690,
+    "image": "dragon_roll.jpg",
+    "category": "premium",
+    "weight": 280,
+    "spicy": false
+  },
+  {
+    "id": 4,
+    "name": "Острый тунец",
+    "description": "Тунец, острый соус спайси, огурец, кунжут.",
+    "price": 550,
+    "image": "spicy_tuna.jpg",
+    "category": "spicy",
+    "weight": 220,
+    "spicy": true
+  },
+  {
+    "id": 5,
+    "name": "Черный Дракон",
+    "description": "Фирменный ролл с черной икрой, угрем и трюфельным маслом.",
+    "price": 890,
+    "image": "black_dragon.jpg",
+    "category": "premium",
+    "weight": 300,
+    "spicy": false
+  },
+  {
+    "id": 6,
+    "name": "Запеченный с мидиями",
+    "description": "Мидии, сырная шапочка, фирменный соус, запеченный в печи.",
+    "price": 480,
+    "image": "baked_mussels.jpg",
+    "category": "baked",
+    "weight": 250,
+    "spicy": false
+  }
+]
