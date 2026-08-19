@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}{{ product.name }} — blackRoll{% endblock %}
+
+{% block content %}
+<section class="product-detail">
+    <div class="container">
+        <a href="/" class="back-link">← Назад в каталог</a>
+        
+        <div class="product-detail-grid">
+            <div class="product-image-large">
+                <!-- Заглушка, если нет реального изображения -->
+                <div class="image-placeholder">
+                    <span>{{ product.name[0] }}</span>
+                </div>
+            </div>
+            
+            <div class="product-info">
+                <h1 class="product-title">{{ product.name }}</h1>
+                
+                {% if product.spicy %}
+                <span class="spicy-badge">🌶 Острый</span>
+                {% endif %}
+                
+                <p class="product-description">{{ product.description }}</p>
+                
+                <div class="product-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">Вес</span>
+                        <span class="meta-value">{{ product.weight }} г</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Категория</span>
+                        <span class="meta-value">{{ product.category }}</span>
+                    </div>
+                </div>
+                
+                <div class="product-price-block">
+                    <span class="price">{{ product.price }} ₽</span>
+                </div>
+                
+                <div class="add-to-cart-block">
+                    <div class="quantity-selector">
+                        <button class="qty-btn minus" onclick="changeQty(-1)">−</button>
+                        <input type="text" id="productQty" value="1" readonly>
+                        <button class="qty-btn plus" onclick="changeQty(1)">+</button>
+                    </div>
+                    <button class="btn btn-primary btn-lg" onclick="addToCartFromDetail()">
+                        В корзину
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    const productId = {{ product.id }};
+    const productName = "{{ product.name }}";
+    const productPrice = {{ product.price }};
+    
+    function changeQty(delta) {
+        const input = document.getElementById('productQty');
+        let val = parseInt(input.value) + delta;
+        if (val < 1) val = 1;
+        input.value = val;
+    }
+    
+    function addToCartFromDetail() {
+        const qty = parseInt(document.getElementById('productQty').value);
+        addToCart(productId, qty);
+    }
+</script>
+{% endblock %}

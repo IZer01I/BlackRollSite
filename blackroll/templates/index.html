@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Герой-секция -->
+<section class="hero">
+    <div class="container">
+        <h1 class="hero-title">Искусство вкуса в каждом ролле</h1>
+        <p class="hero-subtitle">Премиальные ингредиенты, быстрая доставка, безупречный стиль</p>
+        <a href="#catalog" class="btn btn-primary btn-lg">Смотреть меню</a>
+    </div>
+</section>
+
+<!-- Фильтры категорий -->
+<section class="categories-filter" id="catalog">
+    <div class="container">
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-category="all">Все</button>
+            <button class="filter-btn" data-category="classic">Классика</button>
+            <button class="filter-btn" data-category="premium">Премиум</button>
+            <button class="filter-btn" data-category="spicy">Острые</button>
+            <button class="filter-btn" data-category="baked">Запеченные</button>
+        </div>
+    </div>
+</section>
+
+<!-- Каталог товаров -->
+<section class="products-section">
+    <div class="container">
+        <div class="products-grid" id="productsGrid">
+            <!-- Товары будут загружены через JS -->
+        </div>
+    </div>
+</section>
+
+<!-- Секция о нас -->
+<section class="about-section" id="about">
+    <div class="container">
+        <h2 class="section-title">О blackRoll</h2>
+        <p class="section-text">
+            Мы создали blackRoll для тех, кто ценит качество и стиль. 
+            Только свежайшая рыба, отборный рис и лучшие ингредиенты. 
+            Каждый ролл — это произведение искусства, созданное с душой.
+        </p>
+    </div>
+</section>
+
+<!-- Секция доставки -->
+<section class="delivery-section" id="delivery">
+    <div class="container">
+        <h2 class="section-title">Доставка и оплата</h2>
+        <div class="delivery-info">
+            <div class="delivery-item">
+                <h3>🚀 Быстро</h3>
+                <p>Доставим за 60 минут или роллы за наш счет</p>
+            </div>
+            <div class="delivery-item">
+                <h3>💳 Удобно</h3>
+                <p>Оплата картой онлайн или наличными курьеру</p>
+            </div>
+            <div class="delivery-item">
+                <h3>🎁 Щедро</h3>
+                <p>Бесплатная доставка при заказе от 1500 ₽</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Контакты -->
+<section class="contacts-section" id="contacts">
+    <div class="container">
+        <h2 class="section-title">Контакты</h2>
+        <p class="contact-info">📞 +7 (999) 000-00-00</p>
+        <p class="contact-info">📍 Москва, ул. Примерная, 12</p>
+        <p class="contact-info">⏰ Ежедневно с 10:00 до 23:00</p>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Загрузка каталога при старте страницы
+    document.addEventListener('DOMContentLoaded', function() {
+        loadCatalog();
+    });
+</script>
+{% endblock %}
